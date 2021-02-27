@@ -3,6 +3,7 @@
 This project for re-implement FrostNet from [published paper](https://arxiv.org/pdf/2006.09679v4.pdf) and [ clovaai /
 frostnet - Pytorch](https://github.com/clovaai/frostnet) by Tensorflow/Keras 2.4
 
+<b> this project is under development </b>
 
 # Requirements
 
