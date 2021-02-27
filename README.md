@@ -1,4 +1,17 @@
-# FrostNet
+# FrostNet TF
+
+This project for re-implement FrostNet from [published paper](https://arxiv.org/pdf/2006.09679v4.pdf) and [ clovaai /
+frostnet - Pytorch](https://github.com/clovaai/frostnet) by Tensorflow/Keras 2.4
+
+
+# Requirements
+
+1. Utuntu18.04
+
+2. python=3.6
+
+3. tensorflow>=2.4
+
 
 
 # Model architecture:
