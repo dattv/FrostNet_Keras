@@ -713,7 +713,7 @@ if __name__ == '__main__':
     frostnet_model = FrostNet_inference(
         input_shape=(224, 224, 3),
         training=True,
-        nclass=1000, mode='small', width_mult=0.5,
+        nclass=1000, mode='small', width_mult=1.0,
         bottleneck=CascadePreExBottleneck_layer)
 
     # output = frostnet_quant_large_1_25_model(input)
@@ -723,5 +723,12 @@ if __name__ == '__main__':
 
     frostnet_model.save('./results/{}.h5'.format(frostnet_model.name))
 
-    tf.keras.utils.plot_model(frostnet_model, to_file='./results/{}.png'.format(frostnet_model.name),
+    import os
+    import sys
+
+    cur_dir = os.path.dirname(sys.modules['__main__'].__file__)
+    net_dir = os.path.split(cur_dir)[0]
+    root = os.path.split(net_dir)[0]
+
+    tf.keras.utils.plot_model(frostnet_model, to_file=root + '/results/{}.png'.format(frostnet_model.name),
                               show_shapes=True)
